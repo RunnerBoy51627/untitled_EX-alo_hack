@@ -1,3 +1,22 @@
+# Untitled_EX-alo_hack
+I don't know what to call this, but we will keep this name for now.
+
+## What the heck is this all about?
+"This romhack is all about probably a sm64-2 mockup, don't tease me, i don't know what to 
+name the repo. (This Project was a Fixed Project from My LPW Project.)"
+
+This repo will add some releases for Switch, Wii U, N64, and PC. (New 3DS Not Supported.)
+
+## Why did you decide to step away from the LPW project?
+It was lost or something like that unfortunately.
+
+## Other Stuffs
+### To-Dos:
+* add the Beta stuffs
+* SM64-2 Overhaul-like Style Game
+* Make RTC react with the sky textures
+
+Original:
 # sm64ex_alo
 Fork of [sm64pc/sm64ex](https://github.com/sm64pc/sm64ex) with additional features. 
 
