@@ -6,6 +6,7 @@ I don't know what to call this, but we will keep this name for now.
 name the repo. (This Project was a Fixed Project from My LPW Project.)"
 
 This repo will add some releases for Switch, Wii U, N64, and PC. (New 3DS Not Supported.)
+(We will also include the Switch Installer Thing.)
 
 ## Why did you decide to step away from the LPW project?
 It was lost or something like that unfortunately.
@@ -16,8 +17,9 @@ It was lost or something like that unfortunately.
 * SM64-2 Overhaul-like Style Game
 * Make RTC react with the sky textures
 
-Original:
-# sm64ex_alo
+## Hi
+
+Original: # sm64ex_alo
 Fork of [sm64pc/sm64ex](https://github.com/sm64pc/sm64ex) with additional features. 
 
 ## Changes
