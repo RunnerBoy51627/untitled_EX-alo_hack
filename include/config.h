@@ -53,6 +53,7 @@
 #include "config/config_n64.h"
 #include "config/config_objects.h"
 #include "config/config_sounds.h"
+#include "config/config_misc.h"
 
 // Screen Size Defines
 #define SCREEN_WIDTH 320

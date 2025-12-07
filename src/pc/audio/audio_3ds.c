@@ -76,7 +76,7 @@ static inline void audio_3ds_frame()
     audio_3ds_play((u8 *)audio_buffer, 2 * num_audio_samples * 4);
 }
 
-static void audio_3ds_loop()
+static void audio_3ds_loop(void *arg)
 {
     while (running)
     {
@@ -138,7 +138,7 @@ static bool audio_3ds_init()
         prio = 0x19;
     }
 
-    threadId = threadCreate(audio_3ds_loop, 0, 64 * 1024, prio, cpu, true);
+    threadId = threadCreate(audio_3ds_loop, NULL, 64 * 1024, prio, cpu, true);;
 
     if (threadId)
         printf("Created audio thread on core %i\n", cpu);

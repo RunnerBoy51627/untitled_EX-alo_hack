@@ -61,6 +61,14 @@
 #include "pc/discord/discordrpc.h"
 #endif
 
+
+#include "src/pc/rtc.h"
+#include <stdbool.h>
+
+
+RTCInfo gRTC;
+
+
 OSMesg gMainReceivedMesg;
 OSMesgQueue gSIEventMesgQueue;
 
@@ -135,6 +143,13 @@ static inline void audio_frame(void) {
 #endif
 
 void produce_one_frame(void) {
+    #ifdef RTC
+    rtc_update(&gRTC);
+    if (gRTCEnabledPopupTimer > 0) {
+    gRTCEnabledPopupTimer--;
+}
+#endif
+
     gfx_start_frame();
 
     change_audio_volumes();
@@ -362,7 +377,7 @@ void main_func(void) {
     #endif
 
     char window_title[96] =
-    "Super Mario 64 EX (" RAPI_NAME ")"
+    "Project Untitled(" RAPI_NAME ")"
     ;
 
     gfx_init(wm_api, rendering_api, window_title);

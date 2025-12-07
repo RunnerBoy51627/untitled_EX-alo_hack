@@ -29,6 +29,12 @@ int configHUD = TRUE;
 #include "extras/bettercamera.h"
 #endif
 
+#ifdef RTC
+#include "src/pc/rtc.h"
+#include <stdbool.h>
+#include <stdio.h>
+#endif
+
 /* @file hud.c
  * This file implements HUD rendering and power meter animations.
  * That includes stars, lives, coins, camera status, power meter, timer
@@ -348,6 +354,29 @@ void render_hud_keys(void) {
     }
 }
 
+#ifdef RTC
+extern int gRTCEnabledPopupTimer;
+extern bool gRTCEnabledJustNow;
+extern RTCInfo gRTC;
+#endif
+
+#ifdef RTC
+void render_hud_rtc(void) {
+    if (gRTCEnabledPopupTimer > 0) {
+    print_text(20, 20, "RTC has been enabled.");
+} else {
+    // After the message disappears, show the actual RTC time
+    char timeStr[32];
+    sprintf(timeStr, "%02d:%02d:%02d", gRTC.hour, gRTC.min, gRTC.sec);
+    print_text(20, 20, timeStr);
+}
+}
+#else
+void render_hud_rtc(void) {
+print_text(20, 20, "RTC has been Disabled.");
+#endif
+
+
 /**
  * Renders the timer when Mario start sliding in PSS.
  */
@@ -490,6 +519,7 @@ void render_hud(void) {
 #if SHOW_LIVES
         if (hudDisplayFlags & HUD_DISPLAY_FLAG_LIVES) {
             render_hud_mario_lives();
+            render_hud_rtc();
         }
 #endif
 #if SHOW_COINS

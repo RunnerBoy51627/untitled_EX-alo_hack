@@ -61,7 +61,7 @@ Gfx *geo_display_error_message(u32 callContext, UNUSED struct GraphNode *node, U
     if (callContext) {
         if (gDelayForErrorMessage > 0) {
             // Draw color text title.
-            print_text(10, 210, "ERROR    Need more memory");
+            print_text(10, 210, "Project Untitled Error!   Please enable 8 mb in your Project64 Settings!");
 
             // Init generic text rendering
             create_dl_ortho_matrix();

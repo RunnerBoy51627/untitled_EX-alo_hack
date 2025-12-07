@@ -13,9 +13,15 @@
 #include "audio/external.h"
 
 // frame counts for the zoom in, hold, and zoom out of title model
+#ifdef RemasteredLogo
+#define INTRO_STEPS_ZOOM_IN 20
+#define INTRO_STEPS_HOLD_1 500
+#define INTRO_STEPS_ZOOM_OUT 500
+#else
 #define INTRO_STEPS_ZOOM_IN 20
 #define INTRO_STEPS_HOLD_1 75
 #define INTRO_STEPS_ZOOM_OUT 91
+#endif
 
 // background types
 #define INTRO_BACKGROUND_SUPER_MARIO 0

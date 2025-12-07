@@ -7,8 +7,8 @@ BEGIN
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "InternalName", "sm64pc"
-      VALUE "ProductName", "Super Mario 64 PC"
+      VALUE "InternalName", "TUPpc"
+      VALUE "ProductName", "The Untitled Project PC"
     END
   END
   BLOCK "VarFileInfo"
