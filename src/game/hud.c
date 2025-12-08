@@ -363,18 +363,21 @@ extern RTCInfo gRTC;
 #ifdef RTC
 void render_hud_rtc(void) {
     if (gRTCEnabledPopupTimer > 0) {
-    print_text(20, 20, "RTC has been enabled.");
-} else {
-    // After the message disappears, show the actual RTC time
-    char timeStr[32];
-    sprintf(timeStr, "%02d:%02d:%02d", gRTC.hour, gRTC.min, gRTC.sec);
-    print_text(20, 20, timeStr);
-}
+        print_text(20, 20, "RTC has been enabled.");
+    } else {
+        /* After the popup message disappears, show the actual RTC time. */
+        char timeStr[32];
+        /* Ensure sprintf is available on your target; if not, replace with a safe integer-to-string helper. */
+        sprintf(timeStr, "%02d:%02d:%02d", gRTC.hour, gRTC.min, gRTC.sec);
+        print_text(20, 20, timeStr);
+    }
 }
 #else
 void render_hud_rtc(void) {
-print_text(20, 20, "RTC has been Disabled.");
+    print_text(20, 20, "RTC has been Disabled.");
+}
 #endif
+
 
 
 /**

@@ -1,4 +1,4 @@
 #pragma once
 
-#define RTC 0
+//#define RTC 0
 #define RemasteredLogo 1
